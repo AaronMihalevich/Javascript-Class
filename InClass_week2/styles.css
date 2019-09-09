@@ -1,0 +1,13 @@
+.image img{
+    width: 500px;
+}
+
+.imagethumbs{
+    display: inline;
+
+}
+
+.imagethumbs img{
+    width: 200px;
+    
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myHead">My object for the day</h1>
+    <p onclick="myHead.innerHTML = 'Change the text'">Click here</p>
+    <img src="image.jpg" alt="cool image" id="myID" style="width:500px">
+    <script>
+        //window.document.write(window.innerWidth)
+        var myImage = document.getElementById("myID");
+        alert(myImage);
+
+        var myHead = document.getElementById("myHead");
+        document.write(myHead);
+
+        //myHead.innerHTML = "Change the text";
+       // alert(window.document.getElementById("myID"));
+    </script>
+</body>
+</html>

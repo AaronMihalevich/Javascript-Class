@@ -1,0 +1,229 @@
+/* Aaron Mihalevich
+CIS 131
+About Me (Assign 1)
+08/19/2019 */
+
+
+
+    /*
+
+    font-family: 'Vollkorn', serif;
+
+    font-family: 'Montserrat', sans-serif;
+
+ */
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, p{
+  font-family: 'Vollkorn', serif;
+}
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px 10px;
+
+}
+
+header{
+  grid-column: span 12;
+}
+
+.cover{
+  background-image: url(cover_photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 300px;
+}
+
+.hobbies-cover{
+  background-image: url(cover_photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 300px;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+  grid-column: span 12;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+
+nav a{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-head{
+  grid-column: span 12;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #000;
+  float: left;
+  margin-left: 10px;
+}
+
+.my-photo-left{
+  grid-column: span 12;
+  margin: 0px 10px;
+}
+
+.my-photo-left img{
+  width: 100%;
+}
+
+.my-photo-info-right, .my-photo-info-left{
+  grid-column: span 12;
+  margin: 0px 10px;
+}
+
+.my-info{
+  grid-column: span 12;
+  flex-direction: column;
+  margin: 0px 10px;
+}
+
+.my-info-section{
+  text-align: left;
+  padding: 15px 0px;
+}
+
+.my-info-section h2{
+  padding-bottom: 5px;
+}
+
+.my-hobby{
+  grid-column: span 12;
+  margin: 0px 10px;
+}
+
+.hobby-section{
+  grid-column: span 12;
+  margin: 0px 10px;
+}
+
+
+.hobby-section img{
+  width: 100%;
+}
+
+.work{
+  grid-column: span 12;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  margin: 0px 30px;
+}
+
+.work a{
+  text-decoration: none;
+  color: #000;
+}
+
+.work a:hover{
+  transform: scale(2);
+  transition-duration: .1s;
+  color: red;
+}
+
+.form{
+  display: flex;
+  grid-column: span 12;
+  justify-content: center;
+
+}
+
+form{
+  width:500px;
+  box-shadow: 0px 0px 10px gray;
+}
+
+form label{
+  font-size: 20px;
+  margin: 10px;
+}
+
+form input, form select{
+  margin: 10px 10px;
+}
+
+
+@media screen and (min-width: 700px){
+  nav{
+    flex-direction: row;
+    position: fixed;
+    top: 20px;
+  }
+
+  .section-head{
+    margin-left: 30px;
+  }
+
+  .cover{
+    height: 500px;
+  }
+
+  .my-photo-left{
+    grid-column: span 4;
+    margin-left: 30px;
+  }
+
+  .my-photo-info-right{
+    grid-column: span 8;
+    margin-right: 30px;
+  }
+
+  .my-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0px 30px;
+  }
+
+  .my-info-section{
+    padding: 0px 15px;
+    width: 30%;
+  }
+
+  .my-info-section a{
+    text-decoration: none;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .my-hobby{
+    margin: 0px 30px;
+  }
+
+  .hobby-section{
+    grid-column: span 3;
+    margin: 0px 30px;
+  }
+
+}

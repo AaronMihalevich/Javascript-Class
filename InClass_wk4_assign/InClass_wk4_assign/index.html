@@ -1,0 +1,46 @@
+<!-- Aaron Miahelvich
+Functional Image Swap
+CIS-131-101
+09/04/2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>Image Swap</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="image">
+      <img id="imgbox" src="image.jpg" alt="myimage">
+    </div>
+  </div>
+
+
+  <div class="thumbcontainer">
+    <div class="imgthumb">
+      <img onclick="imgSwap(this)" id="myImg1" src="image.jpg" alt="image #1">
+    </div>
+    <div class="imgthumb">
+      <img onclick="imgSwap(this)" id="myImg2" src="image2.jpg" alt="image #2">
+    </div>
+    <div class="imgthumb">
+      <img onclick="imgSwap(this)" id="myImg3" src="image3.jpg" alt="image #3">
+    </div>
+    <div class="imgthumb">
+      <img onclick="imgSwap(this)" id="myImg4" src="image4.jpg" alt="image #4">
+    </div>
+    <!-- onclick="document.getElementById('imgbox').src = 'image4.jpg'" -->
+
+  </div>
+  <p class="orig hide" id="swapBack">Original Images</p>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

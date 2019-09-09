@@ -1,0 +1,95 @@
+/* Aaron Mihalevich
+CIS-131-101
+Subscribe to my website - Week 3
+09/04/2019 */
+
+.margin{
+  margin-top: 30px;
+}
+
+
+
+    /* font-family: 'Cabin Sketch', cursive;
+
+    font-family: 'Overlock', cursive; */
+
+
+
+body{
+  background-image: url(image4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.label{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 25px;
+  color: #4186A5;
+}
+
+input{
+  font-family: 'Overlock', cursive;
+}
+
+select{
+  font-family: 'Overlock', cursive;
+}
+
+.head{
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  height: 100px;
+}
+
+.head-text{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 40px;
+  text-align: center;
+  color: #4186A5;
+}
+
+.h-text{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 30px;
+  text-align: center;
+  color: #4186A5;
+}
+
+.p-text{
+  font-family: 'Overlock', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
+.b-text{
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 20px;
+  text-align: center;
+  color: #4186A5;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.infoBox{
+  background-color: rgba(255, 255, 255, 0.8);
+  height: auto;
+  width: 50%;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+
+.info{
+  text-align: center;
+  font-family: 'Overlock', cursive;
+  font-size: 20px;
+}
+
+form{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 30px;
+  border-bottom-right-radius: 25px;
+}

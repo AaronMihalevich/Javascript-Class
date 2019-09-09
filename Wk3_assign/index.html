@@ -1,0 +1,73 @@
+<!-- Aaron Mihalevich
+CIS-131-101
+Subscribe to my website - Week 3
+09/04/2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Overlock&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Week 3 Assignment</title>
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="head margin">
+      <h1 class="head-text">Welcome to the site.</h1>
+      <p class="p-text">This site features all sorts of cool art and stuff. Make sure to join our contact list for the latest updates!</p>
+    </div>
+    <form>
+      <!----------------------- Inputs for first and last name ----------------------------->
+      <div class="row">
+        <div class="col">
+          <label class="margin label" for="firstname">What's your first name?</label>
+          <input type="text" name="fName" class="form-control" placeholder="First Name" id="fName">
+        </div>
+        <div class="col">
+          <label class="margin label" for="lastline">What's you last name?</label>
+          <input type="text" name="lName" class="form-control" placeholder="Last Name" id="lName">
+        </div>
+      </div>
+      <!----------------------- Dropdown for email or phone ----------------------------->
+      <div class="row">
+        <div class="col">
+          <label class="margin label" for="contactinput">What's the best way to contact you?</label>
+          <select class="form-control" id="contact">
+            <option value="Email">Email</option>
+            <option value="Phone">Phone</option>
+          </select>
+        </div>
+      </div>
+      <!------------------------ Submit button --------------------------------------->
+      <div class="row">
+        <div class="col">
+          <input type="button" class="margin" value="JOIN" onclick="document.getElementById('headDisplay').innerHTML = 'Thanks for joining the site!!!';
+           document.getElementById('boxDisplay').innerHTML = 'We will be contacting you via:';
+           document.getElementById('infoDisplay').innerHTML = document.getElementById('fName').value;
+           document.getElementById('infoDisplay2').innerHTML = document.getElementById('lName').value;
+           document.getElementById('infoDisplay3').innerHTML = document.getElementById('contact').value;">
+        </div>
+      </div>
+    </form>
+    <!---------------------------- form display section --------------------------------->
+    <div class="infoBox">
+      <p class="h-text underline" id="headDisplay"></p>
+      <p class="info" id="infoDisplay"></p>
+      <p class="info" id="infoDisplay2"></p>
+      <p class="b-text" id="boxDisplay"></p>
+      <p class="info" id="infoDisplay3"></p>
+    </div>
+    <!--------------------------- end of container --------------------------->
+  </div>
+
+</body>
+
+</html>
