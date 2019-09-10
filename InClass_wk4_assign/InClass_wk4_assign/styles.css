@@ -39,7 +39,7 @@ body{
 .image img{
     width: 500px;
     height: auto;
-    align-item: center;
+    align-items: center;
     object-fit: cover;
 }
 
