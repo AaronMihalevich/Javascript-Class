@@ -1,0 +1,103 @@
+/* Aaron Miahelvich
+Functional Image Swap
+CIS-131-101
+09/04/2019 */
+
+body{
+  background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#111111;
+  background-size:16px 16px;
+}
+
+.container{
+    display: flex;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-bottom: 1px;
+}
+
+
+.image{
+  width: 500px;
+  height: 550px;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 30px 0px;
+}
+
+.image img{
+    width: 500px;
+    height: auto;
+    align-item: center;
+    object-fit: cover;
+}
+
+.thumbcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-top: 1px solid rgba(15, 15, 15, .8);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-image: linear-gradient(180deg,rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+}
+
+.imgthumb{
+  align-items: center;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.imgthumb img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.orig{
+  font-size: 25px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  border: 1px solid white;
+}
+
+.orig:link{
+  text-decoration: none;
+}
+
+.orig:active{
+  text-decoration: none;
+}
+
+.orig:hover{
+  transition: 2s;
+  color: rgba(70, 195, 220, 0.7);
+  display: block;
+  border: 1px solid rgba(70, 195, 220, 0.7);
+  border-radius: 20px;
+}
+
+.hide{
+  display: none;
+}
