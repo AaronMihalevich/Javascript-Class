@@ -1,24 +1,29 @@
 
 // ****************image array*******************
-var myImages = ["image.jpg", "image2.jpg", "image3.jpg", "image4.jpg", 
+var myImages = ["image.jpg", "image2.jpg", "image3.jpg", "image4.jpg",
 "image5.jpg", "image6.jpg", "image7.jpg", "image8.jpg"];
 
 
 // ******************my timer********************
-// function timer(){ 
-//   setInterval(function(){
-//   for(i=0; i < myImages.length; i++){
-//     document.getElementById('imgbox').src = myImages[i];
-//   }}, 3000);}
+  // setInterval(function(){
+  //   for(i=0; i < myImages.length; i++){
+  //     document.getElementById('imgbox').src = myImages[i];
+  //   }}, 3000);
 
-var timer = setInterval(timeFunc, 3000);
-
-  function timeFunc(){
-    for(i=0; i < myImages.length; i++){
-      document.getElementById('imgbox').src = myImages[i];
-  }
-  console.log(myImages)
-  }
+var timer = setInterval(newFunc, 3000);
+function newFunc(){
+  var myIndex = myImages[i]
+  
+  document.getElementById('imgbox').src = myIndex[];
+}
+// var timer = setInterval(timeFunc, 3000);
+//
+//   function timeFunc(){
+//     for(i=0; i < myImages.length; i++){
+//       document.getElementById('imgbox').src = myImages[i];
+//   }
+//   console.log(myImages[i])
+//   }
 
 
 // function imgTimer(){
@@ -30,12 +35,12 @@ var timer = setInterval(timeFunc, 3000);
 
 // **************my image thumbs*****************
 
-myImages.forEach(arrayImages);
-
-  function arrayImages() {
-      document.getElementById('thumbs').innerHTML = 
-      "<div class='imgthumb'><img onclick='imgSwap(this)' src='" + item + "alt='image #1'></div>";
-    }  
+// myImages.forEach(arrayImages);
+//
+//   function arrayImages() {
+//       document.getElementById('thumbs').innerHTML =
+//       "<div class='imgthumb'><img onclick='imgSwap(this)' src='" + item + "alt='image #1'></div>";
+//     }
 
 
 
@@ -73,4 +78,3 @@ myImages.forEach(arrayImages);
 //   document.getElementById('myImg3').src = 'image3.jpg';
 //   document.getElementById('myImg4').src = 'image4.jpg';
 // }
-
