@@ -54,7 +54,7 @@ myDiv.innerHTML = (movies[0]); // Lilo and Stitch
 //*******ITERATING OVER AN ARRAY *************/
 
 myString = "<select id='movie'>";
-// using the for loop
+//using the for loop
 // for (i=0; i < movies.length; i++){
 //     console.log(movies[i]);
 //     myString += "<li>" + movies[i] + "</li>";
