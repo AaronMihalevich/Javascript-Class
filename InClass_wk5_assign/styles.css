@@ -101,3 +101,9 @@ body{
 .hide{
   display: none;
 }
+
+
+#test{
+  text-align: center;
+  color: #fff;
+}

@@ -1,7 +1,7 @@
 <!-- Aaron Miahelvich
-Functional Image Swap
+Functional Image Swap with array
 CIS-131-101
-09/04/2019 -->
+09/14/2019 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,10 +12,17 @@ CIS-131-101
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
   <title>Image Swap</title>
-
+  <script src="scripts.js"></script>
 </head>
 
 <body>
+
+<!-- test area -->
+<img src="" alt="">
+<div id="test"></div>
+<h1 id="test123"></h1>
+<button id="myClick">Click</button>
+
   <div class="container">
     <div class="image">
       <img id="imgbox" src="image.jpg" alt="myimage">
@@ -23,7 +30,7 @@ CIS-131-101
   </div>
 
 
-  <div class="thumbcontainer">
+  <!-- <div class="thumbcontainer">
     <div class="imgthumb">
       <img onclick="imgSwap(this)" id="myImg1" src="image.jpg" alt="image #1">
     </div>
@@ -35,12 +42,18 @@ CIS-131-101
     </div>
     <div class="imgthumb">
       <img onclick="imgSwap(this)" id="myImg4" src="image4.jpg" alt="image #4">
-    </div>
-    <!-- onclick="document.getElementById('imgbox').src = 'image4.jpg'" -->
+    </div> -->
+    
 
+  <div id="thumbs" class="thumbcontainer">
+     <script>
+         arrayImages();
+      </script> 
+  
   </div>
   <p class="orig hide" id="swapBack">Original Images</p>
-  <script src="scripts.js"></script>
+  
 </body>
 
 </html>
+   

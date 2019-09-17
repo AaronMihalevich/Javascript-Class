@@ -6,12 +6,12 @@ document.getElementById('myclick').addEventListener('click', theFunc);
 document.getElementById('anonButton').addEventListener('dblclick', theFunc);
 
 function theFunc(){
-    alert("LOOK OUT!!!");
+    document.getElementById('greet').innerHTML = "Hello world! " + myAppName;
 }
 
-function greetings(myName) {
+function greetings() {
     //document.write("Hello world! " + myName + myAppName);
-    document.getElementById('greet').innerHTML = "Hello world! " + myName + myAppName;
+    document.getElementById('greet').innerHTML = "Hello world! " + myAppName;
 }
 
 function anObject(theObj) {

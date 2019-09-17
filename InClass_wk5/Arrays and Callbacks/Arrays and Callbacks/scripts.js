@@ -37,7 +37,7 @@ document.getElementById('stop').addEventListener('click', function(){
 
 //*****************************************************
 
-myDiv = document.getElementById('ary');
+myDiv = document.getElementById('test');
 
 var movies = ["Lilo and Stich", "Hawaii 5-0", "Jurassic Park"];
 
