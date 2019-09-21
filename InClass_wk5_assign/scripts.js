@@ -42,4 +42,3 @@ for(p=0; p < myImages.length; p++){
 function imgSwap(theImg){
   document.getElementById('imgbox').src = theImg.src;
 }
-
