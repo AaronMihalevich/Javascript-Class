@@ -14,26 +14,25 @@ var tax = 1.076;
 
 // ****************my pizza array*********************
 var pizza = ["The Mary Jane", "The Magic Dragon", "The Rocky Mountain High",
-                "The Doobie Doo", "The Devil's Lettuce(Vegetarian)", "The Labrador"]
+  "The Doobie Doo", "The Devil's Lettuce(Vegetarian)", "The Labrador"
+]
 
 
 
 
 // ************type of pizza options************
-var p=0;
-for(p=0; p < pizza.length; p++)
-{
+var p = 0;
+for (p = 0; p < pizza.length; p++) {
   document.getElementById('pizzaOptions').innerHTML +=
-  "<option value='0'>" + pizza[p] + "</option>"
+    "<option value='0'>" + pizza[p] + "</option>"
 }
 
 
 // ************Number of pizza options************
 
-var i=0;
-for(i=1; i < 11; i++)
-{
-    document.getElementById('numOptions').innerHTML +=
+var i = 0;
+for (i = 1; i < 11; i++) {
+  document.getElementById('numOptions').innerHTML +=
     "<option value='1'>" + i + "</option>"
 }
 
@@ -44,19 +43,17 @@ for(i=1; i < 11; i++)
 
 // ***********error messages***********
 
-function vals(form){
+function vals(form) {
 
   var isValid = true;
-  if (form.name.value == "")
-  {
+  if (form.name.value == "") {
     isValid = false;
     document.getElementById('nameErr').innerHTML = "<h3 class='error'>" + "Yo, man! You gotta put your name in man!" + "</h3>"
     form.name.style.backgroundColor = "orange";
 
   }
 
-  if (form.phone.value == "")
-  {
+  if (form.phone.value == "") {
     isValid = false;
     document.getElementById('phoneErr').innerHTML = "<h3 class='error'>" + "Man, that's not a real number man.... is it?" + "</h3>"
     form.phone.style.backgroundColor = "orange";
@@ -68,10 +65,10 @@ function vals(form){
 /////////////////////////////////////////////////////////
 // ******************Output section**********************
 /////////////////////////////////////////////////////////
-document.getElementById('myclick').addEventListener('click', myFunc()
-{
-  
-})
+// document.getElementById('myclick').addEventListener('click', myFunc())
+// {
+
+}
 console.log(pizza);
 console.log(i);
 console.log(p);
