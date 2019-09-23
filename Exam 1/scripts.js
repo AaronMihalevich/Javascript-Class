@@ -68,10 +68,7 @@ function vals(form){
 /////////////////////////////////////////////////////////
 // ******************Output section**********************
 /////////////////////////////////////////////////////////
-document.getElementById('myclick').addEventListener('click', myFunc()
-{
-  
-})
+
 console.log(pizza);
 console.log(i);
 console.log(p);

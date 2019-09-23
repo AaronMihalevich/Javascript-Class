@@ -13,6 +13,7 @@ function ranNum()
 function vals(frm)
 {
     var isValid = true;
+    var phoneVal = /\d{3}[.-]\d{3}[.-]\d{4}/;
     if (frm.userName.value == "")
     {
         isValid = false;
