@@ -19,17 +19,17 @@ Exam 1 : CIS-131
   <div class="main-container">
     <div class="inner-container">
       <div class="content">
-<!-- site header         -->
+        <!-- site header         -->
         <img src="cheechs.png" alt="cheech's pizza">
         <h1>Hey, man! We got like great pizza man!</h1>
-<!-- form section -->
-        <form action="" method="get">
+        <!-- form section -->
+        <form action="" method="get" class="form" id="myForm">
           <h2>Hey, man! The dude wants to know your name, man.</h2>
           <div id="nameErr"></div>
-          <input type="text" name="name" placeholder="What's your name man?">
+          <input id="tName" type="text" name="name" placeholder="What's your name man?">
           <h2>We might need to call man.... so we need that number.</h2>
           <div id="phoneErr"></div>
-          <input type="text" name="phone" placeholder="What's your number man?">
+          <input id="tPhone" type="text" name="phone" placeholder="What's your number man?">
           <h2>What type of pizza do you want man?</h2>
           <select name="pizza" id="pizzaOptions">
             <!-- javascript gets placed here -->
@@ -38,10 +38,19 @@ Exam 1 : CIS-131
           <select name="number" id="numOptions">
             <!-- javascript gets placed here -->
           </select>
-          <input onclick="return vals(this.form)" id="myclick" type="submit" value="Order now, man!">
+          <input id="myclick" type="submit" value="Order now, man!">
         </form>
-<!-- order display -->
-        <div id="order"></div>
+        <!-- order display -->
+          <div id="order">
+      
+          </div>
+          <div id="orderDets">
+            <img src="cheechs.png" alt="logo">
+            
+          </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>

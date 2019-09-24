@@ -55,6 +55,12 @@ Exam 1 : CIS-131
     width: 70%;
 }
 
+.order-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 /* **************site content**************** */
 h1{
     font-size: 40px;
@@ -111,5 +117,21 @@ button{
 }
 
 #order{
+   padding: 20px;    
+}
 
+#orderDets{
+    padding: 20px;
+}
+
+#orderDets img{
+    width: 400px;
+    margin: auto;
+}
+
+.output{
+  font-size: 20px;
+  font-family: blenny, sans-serif;
+  text-align: center;
+  color: orangered;
 }
