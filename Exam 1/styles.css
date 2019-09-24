@@ -84,11 +84,18 @@ h2{
 }
 
 h3{
-  font-size: 20px;
-  font-family: serif;
-  font-weight: 900;
-  color: orange;
+    font-size: 20px;
+    font-family: serif;
+    font-weight: 900;
+    color: orange;
 }
+
+h4{
+    font-size: 30px;
+    font-family: blenny, sans-serif;
+    text-align: center;
+    color: orange;
+  }
 
 form{
     display: flex;
@@ -117,16 +124,18 @@ button{
 }
 
 #order{
-   padding: 20px;    
+   padding: 20px;
+   padding-top: 40px;  
+   margin-left: auto;
+   margin-right: auto;  
 }
 
-#orderDets{
-    padding: 20px;
-}
 
-#orderDets img{
-    width: 400px;
-    margin: auto;
+
+.orderDets img{
+    width: 600px;
+    padding-top: 20px;
+    border-top: 2px solid #af3225;
 }
 
 .output{
