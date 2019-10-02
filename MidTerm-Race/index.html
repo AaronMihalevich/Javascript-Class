@@ -15,8 +15,8 @@ CIS-131 09/24/2019 -->
   <title>The Great Space Race</title>
 </head>
 
-<body>
-  <div class="background-container">
+<body id="stars1">
+  <div class="background-container" id="stars2">
     <div class="main-container">
       <div class="head-container">
         <img src="GSR_logo.png" alt="logo">
@@ -28,18 +28,26 @@ CIS-131 09/24/2019 -->
         <img src="light-off.png" alt="green light" id="greenLight">
       </div>
       <div class="lights">
-        <img src="light-off.png" alt="blank light" id="redLight">
+        <img src="red-light.png" alt="red light" id="redLight">
+      </div>
+      <div class="lights">
+        <h2 id="start">Start</h2>
       </div>
 
-      <div class="race-display">
-        <h1>Race results</h1>
-        <p>Purple racer:</p>
-        <p>Teal racer:</p>
+      <div class="race-results">
+        
+          <h1>Race Results</h1>
+        
+        <div>
+          <p id="results"></p>
+        </div>
+        <img id="winnerImg" src="" alt="winner image">
       </div>
     </div>
     <div class="race-container">
-      <img src="purple-ship.png" alt="">
-      <img src="teal-ship.png" alt="">
+      <img id="purple" src="purple-ship.png" alt="">
+      <img id="teal" src="teal-ship.png" alt="">
+      <img id="finish" src="finish-line.png" alt="">
     </div>
 
 
