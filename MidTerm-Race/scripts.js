@@ -25,24 +25,29 @@ function theRace()
     // display race results
     var results = document.getElementById('results')
     var winner = document.getElementById('winnerImg')
-    //start timer
+
+    //start and set timer interval
     var timer = setInterval(random, 30);
 
     function random()
     {
+        //assign a random number to each ship
         var ranNumPurp = Math.floor((Math.random() * 10) + 1);
         var ranNumTeal = Math.floor((Math.random() * 10) + 1);
 
+        //adds up the random numbers for each ship
         pPosition += ranNumPurp;
         tPosition += ranNumTeal;
 
-        
+        //tells the race to end if ships reach 1200 if not keep moving the ships accross the screen
         if((pPosition >= 1200) || (tPosition >= 1200))
         {
+            // clears timer and switches lights when one of racers reach 1200
             clearInterval(timer);
             document.getElementById('greenLight').src = 'light-off.png';
             document.getElementById('redLight').src = 'red-light.png';
 
+            //determine and displays the winner of the race
             if(pPosition > tPosition)
             {
                 results.innerHTML = "Purple Wins!";
@@ -61,13 +66,10 @@ function theRace()
             purple.style.left = pPosition + "px";
             teal.style.left = tPosition + "px";
         }
-
-    
-        console.log(pPosition);
-        console.log(tPosition);
     }
 };
 
+//resets the starting positions of everything
 document.getElementById('winnerImg').addEventListener('click', function()
 {
     document.getElementById('winnerImg').src = "";
