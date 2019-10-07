@@ -23,6 +23,16 @@ font-family: aviano-future, sans-serif; */
   to {background-position: -400px 0px;}
 }
 
+@keyframes backgroundMoveFast {
+  from {background-position: 0 0;}
+  to {background-position: -3600px 0px;}
+}
+
+@keyframes frontgroundMoveFast {
+  from {background-position: 0 0;}
+  to {background-position: -5600px 0px;}
+}
+
 
 
 
@@ -50,7 +60,7 @@ p{
 
 
 body{
-  -webkit-animation: backgroundMove 30s linear 2;
+    animation: backgroundMove 30s linear 5;
     animation-fill-mode: forwards;
     background-image: url("space.jpg");
     background-position: left;
@@ -61,7 +71,7 @@ body{
 }
 
 .background-container{
-    -webkit-animation: frontgroundMove 30s linear 2;
+    animation: frontgroundMove 30s linear 5;
     animation-fill-mode: forwards;
     background-image: url('space2.png');
     background-repeat: repeat;
@@ -121,6 +131,10 @@ body{
   height: 230px;
   width: 500px;
   background-color: #000;
+}
+
+#winnerImg{
+  display: none;
 }
 
 h1{

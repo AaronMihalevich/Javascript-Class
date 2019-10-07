@@ -26,6 +26,10 @@ function theRace()
     var results = document.getElementById('results')
     var winner = document.getElementById('winnerImg')
 
+    //background speed
+    document.getElementById('stars1').style.animation = "backgroundMoveFast 10s linear 1"
+    document.getElementById('stars2').style.animation = "frontgroundMoveFast 10s linear 1"
+
     //start and set timer interval
     var timer = setInterval(random, 30);
 
@@ -44,8 +48,14 @@ function theRace()
         {
             // clears timer and switches lights when one of racers reach 1200
             clearInterval(timer);
+            //change lights
             document.getElementById('greenLight').src = 'light-off.png';
             document.getElementById('redLight').src = 'red-light.png';
+            //display winner image
+            document.getElementById('winnerImg').style.display = "block";
+            // return default background
+            document.getElementById('stars1').style.animation = "backgroundMove 30s linear 5"
+            document.getElementById('stars2').style.animation = "frontgroundMove 30s linear 5"
 
             //determine and displays the winner of the race
             if(pPosition > tPosition)
@@ -74,6 +84,7 @@ document.getElementById('winnerImg').addEventListener('click', function()
 {
     document.getElementById('winnerImg').src = "";
     document.getElementById('results').innerHTML = "";
+    document.getElementById('winnerImg').style.display = "none";
 
     document.getElementById('purple').style.left = "20px";
     document.getElementById('teal').style.left = "20px";
