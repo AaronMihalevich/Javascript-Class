@@ -1,0 +1,58 @@
+<!-- aaron mihalevich
+CIS-131 10/14/19
+Addressbook Assignment -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda:400,800&display=swap" rel="stylesheet">
+    <title>Team Fortress Contacts</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="user-container">
+            <div class="head">
+                <img src="logo.png" alt="">
+                <h1>Team Contact Information</h1>
+            </div>
+            <div class="user-info">
+                <div class="list">
+                    <h2>Meet the Team</h2>
+                    <ul id="theList">
+                        
+                    </ul>
+                </div>
+                <div class="info">
+                    <h2 id="name">The Scout</h2>
+                    <img src="scout.png" alt="the scout" id="img">
+                    <p id="num">1-555-557-2688</p>
+                    <p id="email">thescout@tf2.com</p>
+                    <a id="link" href="" target="black">My intro link</a>
+                </div>
+            </div>
+            <div class="form">
+                <form name="theForm">
+                    <p class="form-text">Your First Name:</p>
+                    <input type="text" placeholder="Fisrt Name" name="fName">
+                    <p class="form-text">Your Last Name:</p>
+                    <input type="text" placeholder="Last Name" name="lName">
+                    <p class="form-text">Your Phone Number:</p>
+                    <input type="text" placeholder="Phone" name="phone">
+                    <p class="form-text">Your Email Address:</p>
+                    <input type="text" placeholder="Email" name="email">
+                    <p class="form-text">Your Link:</p>
+                    <input type="text" placeholder="http://" name="link">
+                    <input type="button" id="myClick" value="Join the team">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

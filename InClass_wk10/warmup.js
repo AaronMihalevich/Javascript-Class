@@ -6,7 +6,7 @@ function order(item, qty, price)
     this.displayOrder = function()
     {
         var subtotal = this.orderQty * this.orderPrice;
-        return `${subtotal}`;
+        return `${subtotal} and ${this.orderItem} and ${this.orderPrice}`;
     }
 }
 
@@ -38,6 +38,5 @@ document.querySelector('h4').addEventListener('click', function()
 document.getElementById('displayOrders').addEventListener('click', function(e)
 {
     var objectID = e.target.id;
-    document.querySelector('h3').innerHTML = aryOrders[objectID]
-    .displayOrder();
+    document.querySelector('h3').innerHTML = aryOrders[objectID].displayOrder();
 })
