@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="movieTitle"></div>
+    <div id="desc"></div>
+
+    <div id="nowPlaying"></div>
+
+    <script>
+        
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.open("get", "https://api.themoviedb.org/3/movie/now_playing?api_key=20c38770f322031e9daaec50e14cfe4e&language=en-US&page=1");
+        httpRequest.send(null);
+        httpRequest.onreadystatechange = aFunction;
+
+        function aFunction()
+        {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200)
+            {
+                var movies = httpRequest.responseText;
+                console.log(movies)
+                var jsObject = JSON.parse(movies);
+                console.log(jsObject)
+                console.log(jsObject.results[1])
+                console.log(jsObject.results[1].title)
+
+                for (var i = 0; i < jsObject.results.length; i++)
+                {
+                    console.log(jsObject.results[i].title)
+                    var sec = document.createElement('SECTION');
+                    var title = document.createElement('H1');
+                    var desc = document.createElement('P');
+
+                    title.innerHTML = jsObject.results[i].title;
+                    desc.innerHTML = jsObject.results[i].overview;
+                    
+                    sec.appendChild(title);
+                    sec.appendChild(desc);
+                    document.getElementById('nowPlaying').appendChild(sec);
+                }
+            }
+        }
+
+    </script>
+
+    <script src="ajax.js"></script>
+</body>
+</html>
