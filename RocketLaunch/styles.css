@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: yellowgreen;
+    border: 2px solid red;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#header{
+    border: 2px solid blue;
+    width: 100%;
+    
+}
+
+#list{
+    border: 2px solid black;
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid purple;
+    width: 100%;
+}
