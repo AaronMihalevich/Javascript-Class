@@ -38,6 +38,7 @@ function launchFunction()
 
        
        headDate.innerHTML = "<strong>Next launch: </strong>" + launchObject.launches[0].net
+
         for (var i=0; i < 5; i++)
         {
             // PUT FIRST 5 LAUNCHES INTO HEAD AND LIST   
@@ -45,56 +46,45 @@ function launchFunction()
      
         }
 
+       
         //**************** LAUNCH TYPE SECTION */
-     
+        var falconLaunch = [];
+        var launcheroneLaunch = [];
+        var arianeLaunch = [];
 
-        // for (var p=0; p < launch.length; p++)
-        // {
-        //     var launchID = launch[p];
-            
-        //     document.getElementById('falcon').addEventListener('click', falconLaunch());
+        for (var p=0; p < launch.length; p++)
+        {
+            // var launchID = launch[p];
+            // 
+            // 
+            // 
 
-        //     function falconLaunch()
-        //     {
-        //         alert("working");
-        //         // if (launchID.lsp == 121)
-        //         // {
-        //         //     for (var f = 0; f < 5; f++)
-        //         //     {
-        //         //         ul.innerHTML += `<li>${(i+1) + " - " + launch[f].net + " " + launch[f].name}</li>`
-        //         //     }
-                
-        //         // // console.log(launchID)
-        //         // // console.log(launchID.name)
-        //         // }
-        //     }
-            
-            
-        //     // var falconLaunch = [];
-        //     // var launcheroneLaunch = [];
-        //     // var arianeLaunch = [];
+            if (launch[p].lsp == 121)
+            {
+                falconLaunch.push(launch[p]);
+                console.log(launch[p])
+            }
 
-        //     // if (launch[p].lsp == 121)
-        //     // {
-        //     //    //console.log(launch[p])
-        //     // }
+            if (launch[p].lsp == 199)
+            {
+                launcheroneLaunch.push(launch[p]);
+                console.log(launch[p])
+            }
 
-        //     // if (launch[p].lsp == 199)
-        //     // {
-        //     //    console.log(launch[p])
-        //     // }
-
-        //     // if (launch[p].lsp == 115)
-        //     // {
-        //     //    //console.log(launch[p])
-        //     // }
-
-        //     // console.log(falconLaunch[0])
-
-           
+            if (launch[p].lsp == 115)
+            {
+                arianeLaunch.push(launch[p]);
+                console.log(launch[p])
+            }
 
             
-        // }
+
+
+        }
+        // console.log(falconLaunch[0])
+        // console.log(falconLaunch[1])
+        // console.log(falconLaunch[2])
+       
 
     
 
