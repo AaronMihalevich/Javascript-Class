@@ -1,38 +1,80 @@
+/* Aaron Mihalevich
+Rocket Launch Project
+CIS-131 10/19/2019 */
+
 *{
     margin: 0;
     box-sizing: border-box;
 }
 
+body{
+    background-image: url(launch.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .main-container{
+    
+    font-family: 'Exo', sans-serif;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    background-color: yellowgreen;
-    border: 2px solid red;
+    background-color: rgba(255, 255, 255, .4);
+    border: 2px solid rgba(0, 0, 0, .6);
+    color: rgba(0, 0, 0, .8); 
     width: 80%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 100px;
 }
 
 #header{
-    border: 2px solid blue;
     width: 100%;
-    
+    padding: 20px 0px 10px 10px;
 }
 
 #list{
-    border: 2px solid black;
     width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, .8);
 }
 
 ul{
     list-style: none;
 }
 
+li{
+    font-size: 18px;
+    padding: 5px 0px;
+}
+
 .buttons{
     display: flex;
     justify-content: space-around;
-    border: 2px solid purple;
     width: 100%;
+    padding: 10px 0px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(0, 0, 0, .8);
+}
+
+a:hover{
+    color: rgba(255, 68, 0, .8);
+}
+
+#timer{
+    padding: 0px 0px 15px 0px;
+    text-align: center;
+}
+
+#date{
+    padding: 0px 0px 5px 0px;
+    text-align: center;
 }

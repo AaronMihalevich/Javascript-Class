@@ -1,3 +1,7 @@
+<!-- Aaron Mihalevich
+Rocket Launch Project
+CIS-131 10/19/2019 -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +9,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
 
     <div class="main-container">
-        <div id="header">
-            <h1>Upcoming launch dates</h1>
+        <div>
+            <h1 id="header">UPCOMING LAUNCH DATES</h1>
             <p id="date"></p>
+            <h2 id="timer"></h2>
         </div>
-        <ul id="list"> 
-            
+        <ul id="list">
+            <li id="launch1"></li>
+            <li id="launch2"></li>
+            <li id="launch3"></li>
+            <li id="launch4"></li>
+            <li id="launch5"></li>
         </ul>
+        
         <div class="buttons">
-            <a href="#" id="falcon">Button</a>
-            <a href="#">Button</a>
-            <a href="#">Button</a>
-            <a href="#">Button</a>
+            <a href="#" onclick="pageLoad()">Next 5 Launches</a>
+            <a href="#" onclick="falconLaunch()">Next Falcon Launches</a>
+            <a href="#" onclick="launcheroneLaunch()">Next LauncherOne Launches</a>
+            <a href="#" onclick="arianeLaunch()">Next Ariane Launches</a>
         </div>
     </div>
     
