@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 12</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h1>My nue Vue stuff</h1>
+
+    <div id="app">
+        {{message}}
+        <input v-model = "message">
+        <!-- or v-on:click -->
+        <button @click="changeMessage">New Message</button>
+        <ul>
+            <!-- for loop -->
+            <li v-on:click = "changeMessage(todo)" v-for="todo in todos">{{todo}}</li>
+        </ul>
+        <button v-on:click="addItem">Add Item</button>
+        <br>
+        <button v-on:click="increments">Increment my clicks</button>
+        <p v-show="clicks > 0">Number of clicks: {{clicks}}</p>
+        <p>Number of clicks by 5: {{clicks5}}</p>
+        <p>Decements numbers by 10: {{clicks}}</p>
+        <button v-on:click="decrements">Decrement</button>
+    </div>
+
+    <script>
+        var app = new Vue(
+            {
+                el: "#app",
+                data: {
+                    message: "Hello",
+                    todos: ["Learn HTML", "Learn CSS", "Learn Js", "Learn Vue"],
+                    clicks: 0,
+                    clicks5: 0
+                },
+                methods: {
+                    changeMessage(theMess)
+                    {
+                        this.message = theMess;
+                    },
+                    addItem()
+                    {
+                        this.todos.push(this.message)
+                    },
+                    increments()
+                    {
+                        this.clicks++;
+                        this.clicks5 = this.clicks + 5
+                    },
+                    decrements()
+                    {
+                        this.clicks = this.clicks - 10
+                    }
+                }
+            }
+        )
+    
+    </script>
+   
+</body>
+</html>

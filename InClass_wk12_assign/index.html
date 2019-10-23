@@ -1,0 +1,64 @@
+
+    <!-- Create a div with an id of #app that contains your VUE data
+    Create a div that tracks the item ordered – it defaults to : “Nothing selected yet”
+    Create a div that holds the summed total after each click
+    Create a UL that displays all the items and the price (each item is an <li>)
+
+ 
+
+    Create a vue instance that is bound to the div element with the id of #app
+    In the vue instance create as data properties:
+        A variable called total which is a sum of the prices of all items clicked
+        Create an array of product objects. Each product has a title and a price
+    When the li is clicked create a function
+        the item ordered message changes to the name of the product selected
+        the sum of total is updated in the div holding the total amount -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{items[0].title}}
+        {{total}}
+        <div>Nothing selected yet.
+        </div>
+        <ul>
+            <li v-on:click="orderNow(item)" v-for="item in items">{{item.title}} -- ${{item.price}}</li>
+        </ul>
+        <p>${{total}}</p>
+    </div>
+    
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: 
+            {
+                total: 0,
+                items: [
+                    {title: "Car", price: "200"},
+                    {title: "Truck", price: "300"}
+                ],
+            },
+            methods:
+            {
+                orderNow(theObj)
+                {
+                    theObj.price.total++;
+
+                }
+            }
+        })
+    </script>
+</body>
+</html>
