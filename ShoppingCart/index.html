@@ -1,0 +1,86 @@
+<!-- Aaron Mihalevich
+CIS-131 Shopping Cart Assign
+10/29/19 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Overlock:400,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <div class="head">
+        <h1>The Corneto Trilogy</h1>
+    </div>
+        <!-- ITEM SECTION -->
+        <div class="item-container"  id="app">
+            <div class="item" v-for="item in items">
+                    <h2>{{item.title}}</h2>
+                    <img v-bind:src="item.src" v-bind:alt="item.title">
+                    <p>{{item.desc}}</p>
+                    <br>
+                    <p>Stock: {{item.stock}}</p>
+                    <p>Price: ${{item.price}}</p>
+                    <button v-on:click="order(item)">Buy {{item.title}}</button>
+            </div>
+
+            <!-- CART SECTION -->
+            <div class="cart">
+                <div v-show="cartItem > 0" class="cartItem">
+                    <h2>Title</h2>
+                    <p></p>
+                    <h2>Qty</h2>
+                    <p></p>
+                    <h2>Price</h2>
+                    <h2>Subtotal</h2>
+                    <h2>Remove</h2>
+                </div>
+                <div class="cartItem" id="cart1">
+                    <p v-show="items[0].ordered > 0">{{items[0].title}}</p>
+                    <p v-show="items[0].ordered > 0" v-on:click="removeOne(items[0])">-</p>
+                    <p v-show="items[0].ordered > 0">{{items[0].ordered}}</p>
+                    <p v-show="items[0].ordered > 0" v-on:click="order(items[0])">+</p>
+                    <p v-show="items[0].ordered > 0">${{items[0].price}}</p>
+                    <p v-show="items[0].ordered > 0">${{items[0].total}}</p>
+                    <button v-show="items[0].ordered > 0" v-on:click="removeAll(items[0])">X</button>
+                </div>
+                <div class="cartItem" id="cart2">
+                        <p v-show="items[1].ordered > 0">{{items[1].title}}</p>
+                        <p v-show="items[1].ordered > 0" v-on:click="removeOne(items[1])">-</p>
+                        <p v-show="items[1].ordered > 0">{{items[1].ordered}}</p>
+                        <p v-show="items[1].ordered > 0" v-on:click="order(items[1])">+</p>
+                        <p v-show="items[1].ordered > 0">${{items[1].price}}</p>
+                        <p v-show="items[1].ordered > 0">${{items[1].total}}</p>
+                        <button v-show="items[1].ordered > 0" v-on:click="removeAll(items[1])">X</button>
+                </div>
+                <div class="cartItem" id="cart3">
+                        <p v-show="items[2].ordered > 0">{{items[2].title}}</p>
+                        <p v-show="items[2].ordered > 0" v-on:click="removeOne(items[2])">-</p>
+                        <p v-show="items[2].ordered > 0">{{items[2].ordered}}</p>
+                        <p v-show="items[2].ordered > 0" v-on:click="order(items[2])">+</p>
+                        <p v-show="items[2].ordered > 0">${{items[2].price}}</p>
+                        <p v-show="items[2].ordered > 0">${{items[2].total}}</p>
+                        <button v-show="items[2].ordered > 0" v-on:click="removeAll(items[2])">X</button>
+                </div>       
+                <div class="cartItem" v-show="theTotal > 0">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p>Total:</p>
+                    <p>${{theTotal}}</p>
+                </div>  
+            </div>
+           
+            
+        </div>
+        
+    <script src="scripts.js"></script>
+</body>
+</html>

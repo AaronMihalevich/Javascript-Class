@@ -1,0 +1,148 @@
+/* Aaron Mihalevich
+CIS-131 Shopping Cart Assign
+10/29/19 */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0f7b47;
+}
+
+p{
+    font-family: 'Overlock', cursive;
+    font-size: 20px;
+}
+
+h2{
+    font-family: 'Overlock', cursive;
+    font-size: 30px;
+    padding: 15px 0px;
+}
+
+button{
+    font-family: 'Overlock', cursive;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 5px 0px;
+}
+
+button:hover{
+    background-color: rgba(152, 0, 0, .4);
+}
+
+
+
+.head{
+    background-image: url(corneto.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 375px;
+    padding-left: 100px;
+    position: relative;
+}
+
+.head h1{
+    color: #edebe2;
+    font-family: 'Overlock', cursive;
+    font-weight: 900;
+    font-size: 150px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+/* ITEM SECTION STYLES */
+
+.item-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.item{
+    text-align: center;
+    width: 20%;
+    background-color: #edebe2b5;
+    padding: 5px 15px;
+}
+
+.item:nth-child(2){
+    border-left: 2px solid rgba(0, 0, 0, .4);
+    border-right: 2px solid rgba(0, 0, 0, .4);
+}
+
+.item img{
+    height: 450px;
+    padding-bottom: 15px;
+}
+
+/* CART SECTION STYLES */
+.cart{
+    
+    width: 60%;
+    background-color: #edebe2b5;
+}
+
+.cartItem{
+    /* border-bottom: 1px solid rgba(0, 0, 0, .3); */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cartItem :nth-child(1){
+    padding: 10px 0px 10px 20px;
+    width: 35%;
+}
+
+.cartItem :nth-child(2){
+    padding: 10px 0px 10px 0px;
+    width: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.cartItem :nth-child(3){
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    width: 3%;
+}
+
+.cartItem :nth-child(4){
+    padding: 10px 0px 10px 0px;
+    width: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.cartItem :nth-child(5){
+    padding: 10px 0px 10px 0px;
+    padding-left: 40px;
+    width: 20%;
+}
+.cartItem :nth-child(6){
+    padding: 10px 0px 10px 0px;
+    width: 20%;
+}
+.cartItem :nth-child(7){
+    padding: 10px 0px 10px 0px;
+    width: 5%;
+}
+
+#cart1{
+    background-color: rgba(152, 0, 0, .4);
+}
+
+#cart2{
+    background-color: rgba(0, 84, 141, .4);
+}
+
+#cart3{
+    background-color: rgba(24, 122, 1, .4);
+}
