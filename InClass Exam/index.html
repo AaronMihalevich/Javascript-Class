@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>TV shows
+
+    </title>
+</head>
+<body>
+    <div >
+        <div id="app" class="main-container">
+           
+            <div v-for="show in shows" class="card">
+                <h2>{{show.name}}</h2>
+                <img v-bind:src="img + show.poster_path" alt="">
+                <p>First Aired: {{show.first_air_date}}</p>
+                <p>Avg Rating: {{show.vote_average}}</p>
+                <p>{{show.overview}}</p>
+                <button v-on:click="review(show)">Reviews</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    
+</body>
+</html>
