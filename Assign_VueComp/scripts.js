@@ -29,23 +29,26 @@ var httpRequest = new XMLHttpRequest();
                     props:['themovies'],
                     template:  
                     `
-                        <div>
-                            <h2><slot></slot></h2>
+                        <div class="row">
                             <div v-for="movie in themovies">
-                                <p>{{movie.title}}</p>
-                            </div>
-                        </div>
-
-
-
-                        
-                        <div class="card" style="width: 18rem;" v-for="movie in themovies">
-                            <div class="card-body">
-                                <h5 class="card-title">{{movie.title}}</h5>
-                                <p class="card-text">{{movie.overview}}</p>
+                                <div class="col">
+                                    <div class="card" style="width: 18rem; margin-top: 50px;">
+                                        <img v-bind:src="imgsrc + movie.poster_path" class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{movie.title}}</h5>
+                                            <p class="card-text">{{movie.overview}}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     `,
+                    data: function()
+                    {
+                        return{
+                            imgsrc: "https://image.tmdb.org/t/p/w300"
+                        }
+                    }
                 })
 
 
@@ -53,6 +56,7 @@ var httpRequest = new XMLHttpRequest();
                     el: "#app",
                     data: {
                         movies: topMovies,
+                        title: "Now Playing"
                     }
                 })
             }
