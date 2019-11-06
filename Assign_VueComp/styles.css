@@ -1,0 +1,20 @@
+.row{
+    background-color: rgb(66, 66, 66);
+    border-top: 25px solid rgb(66, 66, 66);
+}
+
+h1{
+    font-weight: 900;
+    font-size: 50px;
+    color: rgb(66, 66, 66);
+    text-align: center;
+    padding: 20px;
+}
+
+#app{
+    border-top: 25px solid rgb(66, 66, 66);
+}
+
+body{
+    background-color: 25px solid rgb(66, 66, 66);
+}

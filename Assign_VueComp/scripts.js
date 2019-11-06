@@ -23,20 +23,19 @@ var httpRequest = new XMLHttpRequest();
                 var topMovies = jsObject.results;
                 console.log(jsObject.results)
                 console.log(topMovies)
-                
 
                 Vue.component('movie-list',{
                     props:['themovies'],
                     template:  
                     `
-                        <div class="row">
-                            <div v-for="movie in themovies">
+                        <div class="row justify-content-center">
+                            <div v-for="(movie, index) in themovies" v-if="index <=2">
                                 <div class="col">
-                                    <div class="card" style="width: 18rem; margin-top: 50px;">
+                                    <div class="card" style="width: 20rem; margin: 50px;">
                                         <img v-bind:src="imgsrc + movie.poster_path" class="card-img-top">
                                         <div class="card-body">
                                             <h5 class="card-title">{{movie.title}}</h5>
-                                            <p class="card-text">{{movie.overview}}</p>
+                                            <p class="card-text" style="height: 10rem; overflow: auto;">{{movie.overview}}</p>
                                         </div>
                                     </div>
                                 </div>
